@@ -1,17 +1,6 @@
 # Fraud detection in bank transactions
-by Giacomo Benvenuti
-
-![Summary_fig](./figures/Cartoon_fraud.png)
-
----
 
 
-[OPEN THE NOTEBOOK IN GITHUB BY CLICKING HERE](https://github.com/GiacomoBenvenuti/Banking_Fraud_Detection/blob/main/Fraud_detection_Main.ipynb)
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GiacomoBenvenuti/Banking_Fraud_Detection/blob/main/Fraud_detection_Main.ipynb)
-
-
----
 
 ## Motivation
 The customer is an issuing bank seeking a machine learning solution to solve a growing fraud problem.
