@@ -25,18 +25,12 @@ I optimized the hyperparameters of this classifier and estimated the performance
 I also start optimizing a shallow neural network for the same task, but for now it underperforms the Random Foreset classifier.
 
 ## Results 
-By randomly selecting 400 transactions out of 10.000 each month, the client was able to detect less than the 2% of the total frauds, on average (Fig. below, left box). 
+By randomly selecting 400 transactions out of 10.000 each month, the client was able to detect less than the 2% of the total frauds, on average. 
 
 Using the ML pipeline I provide, the client will be able to detect 15 times more frauds (30% of the total, Fig. below central box). 
 
-If the test set was sampled over the same period of time as the training set (by cross-validation) instead of from a period in the future, the performance of the model would be 3 times better (91%, Fig. below right box).  
-
-<p align="center">
-  <img src="figures/SummFig_RF.png" />
-</p>
-
->**Figure 3 | Performance of the model on the test set.** 
-(**left box**) Fraud detected without the model but picking 400 random transactions out of 10.000. I created 20 test sets (10.000 trans. each) by bootstrapping the last two months of the dataset (20.000 trans.). (**central box**) Fraud detected in trasactions from a period in the future (extrapolation). Same as the left box but now we use the model to select the transactions most likely to be a fraud. (**right box**) Fraud detected in transactions from the same period as the training set (interpolation). I selected 20.000 transactions from the same period of the training set by cross-validation and then I generated 20 test sets using bootstrapping.   
+If the test set was sampled over the same period of time as the training set (by cross-validation) instead of from a period in the future, the performance of the model would be 3 times better (91%).  
+  
 ## Discussion 
 This classification task is challenging for many reasons: 
 - the unbalance in the target categories (only 1% of frauds)
@@ -47,17 +41,5 @@ This classification task is challenging for many reasons:
 ## Conclusions
 Despite the challanges of the task summarized above, the ML pipeline I provide will allow the client to detect 15 times more frauds! 
 
----
 
-## Set up environment
-The main folder contains an [Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) environment file to run the notebook (Fraud_detection_env.yml). 
-
-Before running the notebook, create and activate this environment running the following commands in the terminal
-
-```
-> conda env create -f Fraud_detection_env.yml
-
-> conda activate Fraud_detection
-```
-(NB: you need Miniconda or Anaconda to be installed)
  
